@@ -12,7 +12,9 @@ pwm=GPIO.PWM(tilt,50)
 
 pwm.start(0)
 
-pwm.ChangeDutyCycle(1)
+pwm.ChangeDutyCycle(12)
+
+time.sleep(1)
 
 pwm.stop()
 
