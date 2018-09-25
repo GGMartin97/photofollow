@@ -4,7 +4,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
  
 pan = 21
-tilt = 17
+tilt = 20
  
 GPIO.setup(tilt, GPIO.OUT) # white => TILT
 GPIO.setup(pan, GPIO.OUT) # gray ==> PAN
