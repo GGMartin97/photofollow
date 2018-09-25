@@ -30,6 +30,7 @@ def data1():
 	if move1<13 or move1>3:
 		move1=move1+1
 	pwm1.ChangeDutyCycle(move1)
+    return render_template('index.html')
 
 @app.route('/data2')
 def data2():
@@ -37,6 +38,7 @@ def data2():
 	if move1<13 or move1>3:
 		move1=move1-1
 	pwm1.ChangeDutyCycle(move1)
+    return render_template('index.html')
 
 @app.route('/data3')
 def data3():
@@ -44,6 +46,7 @@ def data3():
 	if move2<13 or move2>3:
 		move2=move2+1
 	pwm2.ChangeDutyCycle(move2)
+    return render_template('index.html')
 
 @app.route('/data4')
 def data4():
@@ -51,6 +54,7 @@ def data4():
 	if move2<13 or move2>3:
 		move2=move2-1
 	pwm2.ChangeDutyCycle(move2)
+    return render_template('index.html')
 
 if __name__==('__main__'):
     app.run(debug=True,port=8000,host='0.0.0.0')
