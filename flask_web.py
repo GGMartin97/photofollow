@@ -27,33 +27,33 @@ def index():
 @app.route('/data1')
 def data1():
 	global move1
-	if move1<13 or move1>3:
+	if move1<13 and move1>3:
 		move1=move1+1
-	pwm1.ChangeDutyCycle(move1)
+	    pwm1.ChangeDutyCycle(move1)
 	return render_template('index.html')
 
 @app.route('/data2')
 def data2():
 	global move1
-	if move1<13 or move1>3:
+	if move1<13 and move1>3:
 		move1=move1-1
-	pwm1.ChangeDutyCycle(move1)
+	    pwm1.ChangeDutyCycle(move1)
 	return render_template('index.html')
 
 @app.route('/data3')
 def data3():
 	global move2
-	if move2<13 or move2>3:
+	if move2<13 and move2>3:
 		move2=move2+1
-	pwm2.ChangeDutyCycle(move2)
+	    pwm2.ChangeDutyCycle(move2)
 	return render_template('index.html')
 
 @app.route('/data4')
 def data4():
 	global move2
-	if move2<13 or move2>3:
+	if move2<13 and move2>3:
 		move2=move2-1
-	pwm2.ChangeDutyCycle(move2)
+	    pwm2.ChangeDutyCycle(move2)
 	return render_template('index.html')
 
 if __name__==('__main__'):
